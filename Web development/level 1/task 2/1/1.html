@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Color Changing Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    #colorButton {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff9a9e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.4s ease, transform 0.2s;
+    }
+
+    #colorButton:hover {
+      transform: scale(1.05);
+    }
+
+    #colorButton:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <button id="colorButton">Click Me 💫</button>
+
+  <script>
+    const button = document.getElementById("colorButton");
+
+    const colors = [
+      "#ff9a9e",
+      "#fad0c4",
+      "#a1c4fd",
+      "#c2e9fb",
+      "#fbc2eb",
+      "#f6d365",
+      "#96e6a1",
+      "#d4fc79",
+      "#84fab0",
+      "#fccb90"
+    ];
+
+    let currentColorIndex = 0;
+
+    button.addEventListener("click", () => {
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+      button.style.backgroundColor = colors[currentColorIndex];
+    });
+  </script>
+
+</body>
+</html>

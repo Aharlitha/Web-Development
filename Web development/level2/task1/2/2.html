@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Layout</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="text-center mb-5 fw-bold">Our Features</h2>
+    
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm">
+          <img src="https://www.logicommerce.com/es/wp-content/uploads/sites/4/shutterstock_1818187430-scaled.jpg" class="card-img-top" alt="Feature 1">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-semibold">Fast Performance</h5>
+            <p class="card-text text-muted">Optimized to load in milliseconds and give users a smooth experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.dhbW0LM6wxekmW6fDNPZSgHaEu&pid=Api&P=0&h=180" class="card-img-top" alt="Feature 2">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-semibold">Mobile Friendly</h5>
+            <p class="card-text text-muted">Responsive layout works beautifully across all devices and sizes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.OatahPIZvFIYu5T-QZE7NQAAAA&pid=Api&P=0&h=180" class="card-img-top" alt="Feature 3">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-semibold">Modern Design</h5>
+            <p class="card-text text-muted">Clean and minimal aesthetic with subtle interactions and animations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

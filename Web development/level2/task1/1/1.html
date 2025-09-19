@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Card Component</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card-image img {
+      border-bottom: 2px solid #f5f5f5;
+    }
+    .card-content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-top: 2px solid #f5f5f5;
+    }
+    .card-content .title {
+      color: #4a4a4a;
+    }
+    .card-content .subtitle {
+      color: #7a7a7a;
+    }
+    .card-footer {
+      background-color: #f0f0f0;
+    }
+    .card-footer-item a {
+      color: #00d1b2;
+      font-weight: bold;
+    }
+    .card-footer-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <!-- Card 1-->
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://images.unsplash.com/photo-1622066869975-df6a5029338a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Winter Escape</p>
+                  <p class="subtitle is-6">Find peace and warmth in the heart of the snowy pines.</p>
+                </div>
+              </div>
+              <div class="content">
+                This photo captures a cozy A-frame cabin nestled in a snowy forest, surrounded by tall pine trees dusted with snow. 
+                <br>
+                <a href="#">Discover More</a>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#">Share</a>
+              </p>
+              <p class="card-footer-item">
+                <a href="#">Save</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://images.unsplash.com/photo-1621521467966-e391a7d7f77d?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Wild Waters of the Pines</p>
+                  <p class="subtitle is-6">Where roaring rivers cut through emerald valleys.</p>
+                </div>
+              </div>
+              <div class="content">
+                Crystal-clear rapids rush through a dramatic mountain gorge, surrounded by towering pine forests.
+This untouched paradise is nature’s purest expression of power and peace.
+                <br>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#">Share</a>
+              </p>
+              <p class="card-footer-item">
+                <a href="#">Save</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

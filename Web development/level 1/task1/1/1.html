@@ -1,0 +1,102 @@
+<!-- Create a simple webpage with a heading, paragraph, and image using HTML and CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Webpage</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+  color: #2e2e2e;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: black;
+  text-align: center;
+  border-top: 1px solid #aaa;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✨ A SIMPLE WEBPAGE</h1>
+      <p>Design. Code. Create.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Hello, Dreamer! 🌈</h2>
+        <p>
+          <strong>HTML</strong> (HyperText Markup Language) is the standard language used to create the structure and content of web pages, like headings, paragraphs, links, and images. <strong>CSS</strong> (Cascading Style Sheets) is used to style those elements—changing colors, fonts, layouts, and more to make the page look attractive. Together, HTML and CSS form the foundation of every website on the internet.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>DESIGNED AND BUILT BY AHARLITHA</p>
+  </footer>
+</body>
+</html>

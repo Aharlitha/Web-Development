@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dream Destinations Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #dbe9ff;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery a {
+      display: block;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery a:hover {
+      transform: scale(1.04);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dream Destinations</h1>
+  <p>Explore breathtaking places around the world 🌍</p>
+</header>
+
+<div class="gallery-container">
+  <div class="gallery">
+    <a href="#img1">
+      <img src="https://imgs.search.brave.com/wKF0VbfNH0Apzqq-rVUT5QZXjjHYiwgFq5J2lNPFPOk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yZW5k/ZXIuZmluZWFydGFt/ZXJpY2EuY29tL2lt/YWdlcy9yZW5kZXJl/ZC9zZWFyY2gvcHJp/bnQvOC81LjUvYnJl/YWsvaW1hZ2VzLW1l/ZGl1bS01L29mZi1w/aXN0ZS1za2llci1p/bi1wb3dkZXItc25v/dy1nZWlyLXBldHRl/cnNlbi5qcGc" alt="Mountain">
+      <div class="caption">Swiss Alps</div>
+    </a>
+    <a href="#img2">
+      <img src="https://imgs.search.brave.com/dzq4gxsvlVRWfPj4KiA0D3s8O-QamCsbbluAol3fyV4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9r/ZWxpbmdraW5nLWJl/YWNoLXN1bnNldC1u/dXNhLXBlbmlkYS1p/c2xhbmQtYmFsaS1p/bmRvbmVzaWFfMzM1/MjI0LTMzOC5qcGc_/c2VtdD1haXNfaHli/cmlk" alt="Beach">
+      <div class="caption">Bali Beach</div>
+    </a>
+    <a href="#img3">
+      <img src="https://imgs.search.brave.com/JSO5tFS4F0x_PJIJhuG3J5Mdh6rTu61YwrJfJ5SImR0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzI3LzI3LzY1/LzM2MF9GXzI3Mjc2/NTM0X2R2TU5aNUlI/UTQ0UWlKb0FYUG50/ME1jR0VQSlhQb0d0/LmpwZw" alt="Desert">
+      <div class="caption">Sahara Desert</div>
+    </a>
+    <a href="#img4">
+      <img src="https://imgs.search.brave.com/wgj_iLpWZTP8bndSeVOLz2CDtJk_xq1vNlxb01HFRqI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE3/MTYzODcwOC9waG90/by90cm9waWNhbC1h/bWF6b24tZm9yZXN0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz14bTZhVldZelBH/YnV6Vm1ZU2h1S2Zp/UXBINWl4OWM4T2ZK/WDgxUTUxcHZBPQ" alt="Forest">
+      <div class="caption">Amazon Forest</div>
+    </a>
+  </div>
+</div>
+
+<!-- Lightboxes -->
+<div class="lightbox" id="img1">
+  <a href="#"><img src="https://imgs.search.brave.com/wKF0VbfNH0Apzqq-rVUT5QZXjjHYiwgFq5J2lNPFPOk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yZW5k/ZXIuZmluZWFydGFt/ZXJpY2EuY29tL2lt/YWdlcy9yZW5kZXJl/ZC9zZWFyY2gvcHJp/bnQvOC81LjUvYnJl/YWsvaW1hZ2VzLW1l/ZGl1bS01L29mZi1w/aXN0ZS1za2llci1p/bi1wb3dkZXItc25v/dy1nZWlyLXBldHRl/cnNlbi5qcGc" alt="Swiss Alps"></a>
+</div>
+<div class="lightbox" id="img2">
+  <a href="#"><img src="https://imgs.search.brave.com/dzq4gxsvlVRWfPj4KiA0D3s8O-QamCsbbluAol3fyV4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9r/ZWxpbmdraW5nLWJl/YWNoLXN1bnNldC1u/dXNhLXBlbmlkYS1p/c2xhbmQtYmFsaS1p/bmRvbmVzaWFfMzM1/MjI0LTMzOC5qcGc_/c2VtdD1haXNfaHli/cmlk" alt="Bali Beach"></a>
+</div>
+<div class="lightbox" id="img3">
+  <a href="#"><img src="https://imgs.search.brave.com/JSO5tFS4F0x_PJIJhuG3J5Mdh6rTu61YwrJfJ5SImR0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzI3LzI3LzY1/LzM2MF9GXzI3Mjc2/NTM0X2R2TU5aNUlI/UTQ0UWlKb0FYUG50/ME1jR0VQSlhQb0d0/LmpwZw" alt="Sahara Desert"></a>
+</div>
+<div class="lightbox" id="img4">
+  <a href="#"><img src="https://imgs.search.brave.com/wgj_iLpWZTP8bndSeVOLz2CDtJk_xq1vNlxb01HFRqI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE3/MTYzODcwOC9waG90/by90cm9waWNhbC1h/bWF6b24tZm9yZXN0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz14bTZhVldZelBH/YnV6Vm1ZU2h1S2Zp/UXBINWl4OWM4T2ZK/WDgxUTUxcHZBPQ" alt="Amazon Forest"></a>
+</div>
+
+</body>
+</html>

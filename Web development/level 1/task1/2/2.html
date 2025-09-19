@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BASIC FORM</title>
+  <style>
+    /* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container styling */
+.form-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.form-box h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #66a6ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 166, 255, 0.5);
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66a6ff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4d8be3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Send a Message</h2>
+    <form action="#" method="post">
+      <input type="text" name="inputField" placeholder="Type something..." required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

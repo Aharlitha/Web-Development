@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Nav Menu</title>
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --bg-color: #1f2937;
+      --text-color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+    }
+
+    nav {
+      background-color: var(--bg-color);
+      padding: 1rem 2rem;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo {
+      color: var(--text-color);
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Hamburger Styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      justify-content: space-between;
+    }
+
+    .hamburger span {
+      background: white;
+      height: 3px;
+      width: 100%;
+      border-radius: 3px;
+      transition: 0.4s;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Transform hamburger into X */
+    input:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-color);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+    }
+
+    input:checked + .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    input:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links li {
+        margin: 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu-container">
+      <div class="logo">MySite</div>
+      <input type="checkbox" id="toggle" />
+      <label for="toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>
